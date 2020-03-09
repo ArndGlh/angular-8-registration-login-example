@@ -14,12 +14,16 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AlertComponent } from './_components';
 
+import { AngularCountdownDateTimeModule } from 'angular-countdown-date-time';
+
+
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        appRoutingModule
+        appRoutingModule,
+        AngularCountdownDateTimeModule
     ],
     declarations: [
         AppComponent,

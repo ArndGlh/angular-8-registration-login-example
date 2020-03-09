@@ -4,10 +4,12 @@ import { first } from 'rxjs/operators';
 import { User } from '@/_models';
 import { UserService, AuthenticationService } from '@/_services';
 
+
 @Component({ templateUrl: 'home.component.html' })
 export class HomeComponent implements OnInit {
     currentUser: User;
     users = [];
+    endTime  = '2020-03-10T13:00:00';
 
     constructor(
         private authenticationService: AuthenticationService,
