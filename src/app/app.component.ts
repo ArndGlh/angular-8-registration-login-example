@@ -15,16 +15,6 @@ export class AppComponent {
         private authenticationService: AuthenticationService
     ) {
         this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
-
-        let user = new  User;
-        let users = [];
-        user.username = "Lisa";
-        user.password = "Je t'aime"
-        user.id = 1;
-        user.firstName = "Lisa";
-        user.lastName = "Labeque";
-        users.push(user);
-        localStorage.setItem('users', JSON.stringify(users));
     }
 
     logout() {

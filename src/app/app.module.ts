@@ -15,6 +15,7 @@ import { RegisterComponent } from './register';
 import { AlertComponent } from './_components';
 
 import { AngularCountdownDateTimeModule } from 'angular-countdown-date-time';
+import { NgxAudioPlayerModule } from 'ngx-audio-player';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AngularCountdownDateTimeModule } from 'angular-countdown-date-time';
         ReactiveFormsModule,
         HttpClientModule,
         appRoutingModule,
-        AngularCountdownDateTimeModule
+        AngularCountdownDateTimeModule,
+        NgxAudioPlayerModule
     ],
     declarations: [
         AppComponent,

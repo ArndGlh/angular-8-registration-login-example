@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { first } from 'rxjs/operators';
-
 import { User } from '@/_models';
 import { UserService, AuthenticationService } from '@/_services';
 
@@ -20,6 +20,16 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         this.loadAllUsers();
+        let user = new  User;
+        let users = [];
+        user.username = "Lisa";
+        user.password = "Je t'aime"
+        user.id = 1;
+        user.firstName = "Lisa";
+        user.lastName = "Labeque";
+        users.push(user);
+        localStorage.setItem('users', JSON.stringify(users));
+
     }
 
     deleteUser(id: number) {
